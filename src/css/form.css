@@ -1,0 +1,149 @@
+.form {
+    margin: 32px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form label {
+    margin-right: 8px;
+}
+
+.form input {
+    padding: 8px 16px;
+    outline: none;
+    width: 272px;
+    height: 40px;
+    border: 1px solid #808080;
+    border-radius: 4px;
+    letter-spacing: 0.04em;
+    color: #2e2f42;
+    transition: border 250ms linear;
+
+    &:hover {
+        border: 1px solid #000000
+    }
+
+    &:focus {
+        border: 1px solid #4e75ff
+    }
+
+    &::placeholder {
+        letter-spacing: 0.04em;
+        color: #808080;
+    }
+}
+
+@media (max-width: 480px) {
+    .form input {
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
+.form button {
+    padding: 8px 16px;
+    border: none;
+    background-color: #4e75ff;
+    border-radius: 8px;
+    color: #FFFFFF;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    transition: background-color 250ms linear;
+
+    &:hover {
+        background-color: #6c8cff;
+    }
+}
+
+.gallery {
+    display: grid;
+    gap: 24px;
+    padding-bottom: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+
+.sl-image {
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.iziToast>.iziToast-close {
+    background: url(../img/close.svg) no-repeat 50% 50%;
+    transition: opacity 250ms linear;
+}
+
+.iziToast>.iziToast-body .iziToast-message {
+    white-space: pre-line;
+}
+
+.gallery-item {
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid #808080;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+    transition: transform 250ms linear, box-shadow 250ms linear;
+
+    &:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+    }
+}
+
+.gallery-link img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.info {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+    padding: 16px;
+    background: #fafafa;
+}
+
+.info p {
+    font-size: 14px;
+    color: #2e2e2e;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+}
+
+.description {
+    font-weight: 600;
+    color: #555;
+}
+
+.loader.visible {
+    display: block;
+}
+
+.loader {
+    margin: 0 auto;
+    width: 30px;
+    height: 30px;
+    border: 5px solid #030303;
+    border-bottom-color: #FF3D00;
+    border-radius: 50%;
+    display: none;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+}
+
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
