@@ -41,7 +41,8 @@
     }
 }
 
-.form button {
+.form button,
+.load-more {
     padding: 8px 16px;
     border: none;
     background-color: #4e75ff;
@@ -57,10 +58,20 @@
     }
 }
 
+.load-more {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 30px;
+}
+
+.load-more.is-hidden {
+    visibility: hidden;
+}
+
 .gallery {
     display: grid;
     gap: 24px;
-    padding-bottom: 20px;
+    margin-bottom: 20px;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
 }
 
@@ -128,6 +139,7 @@
 
 .loader {
     margin: 0 auto;
+    margin-bottom: 10px;
     width: 30px;
     height: 30px;
     border: 5px solid #030303;
